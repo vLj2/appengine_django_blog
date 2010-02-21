@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Create Post{% endblock %}
+
+{% block content %}
+<form action="{%url blog.views.create%}" method="post">
+    <table>
+        {{ form }}
+        <tr><td><input type="submit" name="submit" value="Create" /><input type="submit" name="submit" value="Preview"></td></tr>
+    </table>
+</form>
+
+{% if preview %}
+<h1>Title:</h1>
+{{ preview.title }}
+<h1>URI Slug:</h1>
+{{ preview.uri }}
+<h1>Tags:</h1>
+{{ preview.tags }}
+<h1>Teaser:</h1>
+{{ preview.teaser_html|safe }}
+<h1>Content:</h1>
+{{ preview.content_html|safe }}
+{% endif %}
+
+{% endblock %}
+

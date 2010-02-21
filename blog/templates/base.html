@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <title>
+            {%block title%}{%endblock%} | JoeyB.org
+        </title>
+        <style type="text/css">
+            @import "/static/css/style.css";
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header">
+                <a class="logo" href="/">Blog on Google Appengine</a>
+            </div>
+            <div id="content">
+                {%block content%}{%endblock%}
+            </div>
+
+            <div id="nav">
+                <h2>About Me</h2>
+                <p>Some text about me</p>
+            </div>
+
+            <div id="footer">
+                © Your Name, 2010 | <a href="/">Home</a>
+            </div>
+        </div>
+    </body>
+</html>
+
